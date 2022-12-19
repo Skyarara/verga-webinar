@@ -29,7 +29,7 @@
                     <li class="nav-item"><a class="nav-link" href="#">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                     <li class="nav-item"><a class="nav-link" href="#features">features</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#f">Login</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Login</a></li>
                 </ul>
             </div>
         </div>
@@ -40,7 +40,7 @@
             <div class="row gx-5 justify-content-center">
                 <div class="col-lg-6">
                     <div class="text-center my-5">
-                        <h1 class="display-5 fw-bolder text-white mb-2">Unlock your self with Verga</h1>
+                        <h1 class="display-5 fw-bolder text-white mb-2">Unlock yourself with Verga</h1>
                         <p class="lead text-white-50 mb-4">
                             Verga is a website that provides information regarding webinars to help users improve their
                             skills and abilities.
