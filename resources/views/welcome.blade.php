@@ -155,29 +155,9 @@
         </div>
     </section>
     <section id="about">
-        <div class="bg-light">
-            <div class="container py-5">
-                <div class="row h-100 align-items-center py-5">
-                    <div class="col-lg-6">
-                        <h1 class="display-4">About us page</h1>
-                        <p class="lead text-muted mb-0">
-                            Create a minimal about us page using Bootstrap 4.
-                        </p>
-                        <p class="lead text-muted">
-                            Snippet by
-                            <a href="https://bootstrapious.com/snippets" class="text-muted">
-                                <u>Bootstrapious</u></a>
-                        </p>
-                    </div>
-                    <div class="col-lg-6 d-none d-lg-block">
-                        <img src="https://bootstrapious.com/i/snippets/sn-about/illus.png" alt="" class="img-fluid" />
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <div class="bg-white py-5">
             <div class="container py-5">
+            <h2 class="display-4 font-weight-light">About Us</h2>
                 <div class="row align-items-center mb-5">
                     <div class="col-lg-6 order-2 order-lg-1">
                         <i class="fa fa-bar-chart fa-2x mb-3 text-primary"></i>
@@ -216,9 +196,6 @@
                 <div class="row mb-4">
                     <div class="col-lg-5">
                         <h2 class="display-4 font-weight-light">Our team</h2>
-                        <p class="font-italic text-muted">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        </p>
                     </div>
                 </div>
 
@@ -226,24 +203,10 @@
                     <!-- Team item-->
                     <div class="col-xl-3 col-sm-6 mb-5">
                         <div class="bg-white rounded shadow-sm py-5 px-4">
-                            <img src="https://bootstrapious.com/i/snippets/sn-about/avatar-4.png" alt="" width="100"
+                            <img src="{{ asset('images/richard.jpeg') }}" alt="" width="100"
                                 class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm" />
-                            <h5 class="mb-0">Manuella Nevoresky</h5>
+                            <h5 class="mb-0">RICHARD TANDY JAPUTRA</h5>
                             <span class="small text-uppercase text-muted">CEO - Founder</span>
-                            <ul class="social mb-0 list-inline mt-3">
-                                <li class="list-inline-item">
-                                    <a href="#" class="social-link"><i class="fa fa-facebook-f"></i></a>
-                                </li>
-                                <li class="list-inline-item">
-                                    <a href="#" class="social-link"><i class="fa fa-twitter"></i></a>
-                                </li>
-                                <li class="list-inline-item">
-                                    <a href="#" class="social-link"><i class="fa fa-instagram"></i></a>
-                                </li>
-                                <li class="list-inline-item">
-                                    <a href="#" class="social-link"><i class="fa fa-linkedin"></i></a>
-                                </li>
-                            </ul>
                         </div>
                     </div>
                     <!-- End-->
@@ -251,24 +214,10 @@
                     <!-- Team item-->
                     <div class="col-xl-3 col-sm-6 mb-5">
                         <div class="bg-white rounded shadow-sm py-5 px-4">
-                            <img src="https://bootstrapious.com/i/snippets/sn-about/avatar-3.png" alt="" width="100"
+                            <img src="{{ asset('images/hafiz.jpeg') }}" alt="" width="100"
                                 class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm" />
-                            <h5 class="mb-0">Samuel Hardy</h5>
+                            <h5 class="mb-0">HAFIZ ADYATMA</h5>
                             <span class="small text-uppercase text-muted">CEO - Founder</span>
-                            <ul class="social mb-0 list-inline mt-3">
-                                <li class="list-inline-item">
-                                    <a href="#" class="social-link"><i class="fa fa-facebook-f"></i></a>
-                                </li>
-                                <li class="list-inline-item">
-                                    <a href="#" class="social-link"><i class="fa fa-twitter"></i></a>
-                                </li>
-                                <li class="list-inline-item">
-                                    <a href="#" class="social-link"><i class="fa fa-instagram"></i></a>
-                                </li>
-                                <li class="list-inline-item">
-                                    <a href="#" class="social-link"><i class="fa fa-linkedin"></i></a>
-                                </li>
-                            </ul>
                         </div>
                     </div>
                     <!-- End-->
@@ -276,24 +225,10 @@
                     <!-- Team item-->
                     <div class="col-xl-3 col-sm-6 mb-5">
                         <div class="bg-white rounded shadow-sm py-5 px-4">
-                            <img src="https://bootstrapious.com/i/snippets/sn-about/avatar-2.png" alt="" width="100"
+                            <img src="{{ asset('images/ivan.jpeg') }}" alt="" width="100"
                                 class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm" />
-                            <h5 class="mb-0">Tom Sunderland</h5>
+                            <h5 class="mb-0">IVAN FEBRIANTO</h5>
                             <span class="small text-uppercase text-muted">CEO - Founder</span>
-                            <ul class="social mb-0 list-inline mt-3">
-                                <li class="list-inline-item">
-                                    <a href="#" class="social-link"><i class="fa fa-facebook-f"></i></a>
-                                </li>
-                                <li class="list-inline-item">
-                                    <a href="#" class="social-link"><i class="fa fa-twitter"></i></a>
-                                </li>
-                                <li class="list-inline-item">
-                                    <a href="#" class="social-link"><i class="fa fa-instagram"></i></a>
-                                </li>
-                                <li class="list-inline-item">
-                                    <a href="#" class="social-link"><i class="fa fa-linkedin"></i></a>
-                                </li>
-                            </ul>
                         </div>
                     </div>
                     <!-- End-->
@@ -301,24 +236,20 @@
                     <!-- Team item-->
                     <div class="col-xl-3 col-sm-6">
                         <div class="bg-white rounded shadow-sm py-5 px-4">
-                            <img src="https://bootstrapious.com/i/snippets/sn-about/avatar-1.png" alt="" width="100"
+                            <img src="{{ asset('images/amel.jpeg') }}" alt="" width="100"
                                 class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm" />
-                            <h5 class="mb-0">John Tarly</h5>
+                            <h5 class="mb-0">AMELIA CAROLINA</h5>
                             <span class="small text-uppercase text-muted">CEO - Founder</span>
-                            <ul class="social mb-0 list-inline mt-3">
-                                <li class="list-inline-item">
-                                    <a href="#" class="social-link"><i class="fa fa-facebook-f"></i></a>
-                                </li>
-                                <li class="list-inline-item">
-                                    <a href="#" class="social-link"><i class="fa fa-twitter"></i></a>
-                                </li>
-                                <li class="list-inline-item">
-                                    <a href="#" class="social-link"><i class="fa fa-instagram"></i></a>
-                                </li>
-                                <li class="list-inline-item">
-                                    <a href="#" class="social-link"><i class="fa fa-linkedin"></i></a>
-                                </li>
-                            </ul>
+                        </div>
+                    </div>
+                    <!-- End-->
+                    <!-- Team item-->
+                    <div class="col-xl-3 col-sm-6">
+                        <div class="bg-white rounded shadow-sm py-5 px-4">
+                            <img src="{{ asset('images/amel.jpeg') }}" alt="" width="100"
+                                class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm" />
+                            <h5 class="mb-0">David Sie Wettleson</h5>
+                            <span class="small text-uppercase text-muted">CEO - Founder</span>
                         </div>
                     </div>
                     <!-- End-->
@@ -383,6 +314,20 @@
     <!-- Core theme JS-->
     <script src="{{ url('js/scripts.js') }}"></script>
     <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+  
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/63bae3f5c2f1ac1e202c579b/1gm90kukc';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    <!--End of Tawk.to Script-->
 </body>
 
 </html>
