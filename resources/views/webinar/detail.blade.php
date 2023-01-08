@@ -65,8 +65,8 @@
             </div>
         </div>
     </header>
-    <!-- Features section-->
-    <section class="py-5 border-bottom" id="features">
+    <!-- Webinars section-->
+    <section class="py-5 border-bottom" id="webinars">
         <div class="container px-5 my-5">
             <div class="row gx-5 justify-content-center text-center">
                 <div class="col-lg-4 mb-5 mb-lg-0">

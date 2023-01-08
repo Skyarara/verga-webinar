@@ -84,13 +84,13 @@
         </div>
     </section>
     <!-- Pricing section-->
-    <section class="bg-light py-5 border-bottom" id=>
+    <section class="bg-light py-5 border-bottom" id="webinars">
         <div class="container px-5 my-5">
             <div class="text-center mb-5">
-                <h2 class="fw-bolder mb-3">Learn what you want</h2>
+                <h2 class="fw-bolder mb-5">Learn what you want</h2>
                 <div class="row">
                     <div class="col-md-4">
-                        <form action="" method="get">
+                        <form action="{{ route("landing")."#webinars" }}" method="get">
                             <select name="category" class="form-control" onchange="this.form.submit()">
                                 <option value="">Search by Category</option>
                                 @foreach ($category as $item)
@@ -102,7 +102,7 @@
                         </form>
                     </div>
                     <div class="col">
-                        <form action="" method="get">
+                        <form action="{{ route("landing")."#webinars" }}" method="get">
                             <div class="input-group mb-3">
                                 <input type="text" class="form-control" placeholder="Search by Title" name="search"
                                     value="{{ request()->get('search') ? request()->get('search') : "" }}">
@@ -115,7 +115,7 @@
                 </div>
             </div>
             <div class=" row gx-5 justify-content-center">
-                @foreach ($webinar as $dt)
+                @forelse ($webinar as $dt)
                 <div class="col-lg-6 col-xl-4 mb-3">
                     <div class="card mb-5 mb-xl-0">
                         <div class="card-body p-5">
@@ -144,7 +144,9 @@
                         </div>
                     </div>
                 </div>
-                @endforeach
+                @empty
+                <p class="text-center">Data Empty</p>
+                @endforelse
                 <div class="justify-content-center">
                     {{ $webinar->links() }}
                 </div>
