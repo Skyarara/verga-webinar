@@ -186,7 +186,7 @@
                         <i class="fa fa-bar-chart fa-2x mb-3 text-primary"></i>
                         <h2 class="font-weight-light">Verga</h2>
                         <p class="font-italic text-muted mb-4">
-                        Verga adalah website yang menyediakan informasi mengenai webinar untuk membantu pengguna dalam meningkatkan skill dan keterampilan. 
+                        Verga adalah website yang menyediakan informasi mengenai webinar untuk membantu pengguna dalam meningkatkan skill dan keterampilan. Website Verga sendiri merupakan ide yang muncul dikarenakan faktor kurangnya wadah untuk menampung webinar webinar yang ada. Sehingga membuat orang yang ingin mengakses webinar mengalami kesusahan. 
                         </p>
                     </div>
                     <div class="col-lg-5 px-5 mx-auto order-1 order-lg-2">
