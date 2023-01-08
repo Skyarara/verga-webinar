@@ -45,7 +45,7 @@
                         </div>
                         <div class="form-group mb-3">
                             <label>Contact Person</label>
-                            <input type="text" name="CP" class="form-control" placeholder="Contact Person" required>
+                            <input type="text" name="cp" class="form-control" placeholder="Contact Person" required>
                         </div>
                         <button type="submit" class="btn btn-primary">Add</button>
                     </form>

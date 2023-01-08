@@ -137,6 +137,6 @@ class WebinarController extends Controller
         $webinar->status = $status;
         $webinar->update();
 
-        return redirect()->route('webinar_index');
+        return redirect()->back();
     }
 }
