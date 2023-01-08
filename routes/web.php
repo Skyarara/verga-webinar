@@ -1,7 +1,12 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth ;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\LandingController;
+use App\Http\Controllers\WebinarController;
+use App\Http\Controllers\CategoryController;
 
 
 /*
@@ -15,13 +20,34 @@ use Illuminate\Support\Facades\Auth ;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/login', function () {
-    return view('auth.Login');
-});
-
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//home
+Route::get('/home', [HomeController::class, 'index'])->name('home');
+
+//landing
+Route::get('/', [LandingController::class, 'index'])->name('landing');
+Route::get('/webinar/show/{id}', [LandingController::class, 'show'])->name('webinar_show');
+
+//contact
+Route::get('/contact', [ContactController::class, 'index'])->name('contact_index');
+Route::post('/contact/store', [ContactController::class, 'store'])->name('contact_store');
+Route::get('/contact/{id}', [ContactController::class, 'show'])->name('contact_show');
+Route::get('/contact/destroy/{id}', [ContactController::class, 'destroy'])->name('contact_destroy');
+
+//category
+Route::get('/category', [CategoryController::class, 'index'])->name('category_index');
+Route::get('/category/create', [CategoryController::class, 'create'])->name('category_create');
+Route::post('/category/store', [CategoryController::class, 'store'])->name('category_store');
+Route::get('/category/edit/{id}', [CategoryController::class, 'edit'])->name('category_edit');
+Route::post('/category/update', [CategoryController::class, 'update'])->name('category_update');
+Route::get('/category/destroy/{id}', [CategoryController::class, 'destroy'])->name('category_destroy');
+
+//webinar
+Route::get('/webinar', [WebinarController::class, 'index'])->name('webinar_index');
+Route::get('/webinar/create', [WebinarController::class, 'create'])->name('webinar_create');
+Route::post('/webinar/store', [WebinarController::class, 'store'])->name('webinar_store');
+Route::get('/webinar/edit/{id}', [WebinarController::class, 'edit'])->name('webinar_edit');
+Route::post('/webinar/update', [WebinarController::class, 'update'])->name('webinar_update');
+Route::get('/webinar/status/{id}', [WebinarController::class, 'status'])->name('webinar_status');
+Route::get('/webinar/destroy/{id}', [WebinarController::class, 'destroy'])->name('webinar_destroy');
