@@ -15,7 +15,9 @@ class CreateWebinarsTable extends Migration
     {
         Schema::create('webinars', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('category_id')->constrained();
+            $table->foreignId('category_id')->constrained()
+            ->onUpdate('cascade')
+            ->onDelete('cascade');
             $table->string('title');
             $table->text('description');
             $table->text('image');

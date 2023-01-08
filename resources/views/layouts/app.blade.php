@@ -19,13 +19,15 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    @yield('css')
 </head>
 
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand" href="{{ route('home') }}">
                     Verga
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -46,6 +48,17 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('landing') }}">{{ __('Home') }}</a>
                         </li>
+                        @Auth
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('category_index') }}">{{ __('Category') }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('webinar_index') }}">{{ __('Webinar') }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('contact_index') }}">{{ __('Contact') }}</a>
+                        </li>
+                        @endauth
                         @guest
                         @if (Route::has('login'))
                         <li class="nav-item">
@@ -53,11 +66,11 @@
                         </li>
                         @endif
 
-                        @if (Route::has('register'))
+                        {{-- @if (Route::has('register'))
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                         </li>
-                        @endif
+                        @endif --}}
                         @else
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"

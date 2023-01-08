@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             WebinarSeeder::class,
             UserWebinarSeeder::class,
+            ContactSeeder::class,
         ]);
     }
 }
