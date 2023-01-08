@@ -27,6 +27,7 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 //landing
 Route::get('/', [LandingController::class, 'index'])->name('landing');
+Route::get('/webinar/show/{id}', [LandingController::class, 'show'])->name('webinar_show');
 
 //contact
 Route::get('/contact', [ContactController::class, 'index'])->name('contact_index');
@@ -46,7 +47,6 @@ Route::get('/category/destroy/{id}', [CategoryController::class, 'destroy'])->na
 Route::get('/webinar', [WebinarController::class, 'index'])->name('webinar_index');
 Route::get('/webinar/create', [WebinarController::class, 'create'])->name('webinar_create');
 Route::post('/webinar/store', [WebinarController::class, 'store'])->name('webinar_store');
-Route::post('/webinar/show/{id}', [WebinarController::class, 'show'])->name('webinar_show');
 Route::get('/webinar/edit/{id}', [WebinarController::class, 'edit'])->name('webinar_edit');
 Route::post('/webinar/update', [WebinarController::class, 'update'])->name('webinar_update');
 Route::get('/webinar/status/{id}', [WebinarController::class, 'status'])->name('webinar_status');

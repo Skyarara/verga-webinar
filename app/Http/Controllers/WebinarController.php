@@ -52,6 +52,7 @@ class WebinarController extends Controller
             'image' => $request->file('image')->store('webinar-image'),
             'date' => $request->date,
             'status' => $status,
+            'cp' => $request->cp,
         ];
 
         Webinar::create($data);
@@ -93,6 +94,7 @@ class WebinarController extends Controller
             'description' => $request->description,
             'date' => $request->date,
             'status' => $status,
+            'cp' => $request->cp
         ];
 
         if($request->image){

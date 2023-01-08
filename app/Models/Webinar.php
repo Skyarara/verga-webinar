@@ -16,4 +16,18 @@ class Webinar extends Model
     {
         return $this->belongsTo(Category::class, 'category_id', 'id');
     }
+
+    public function scopeSearch($query, $search)
+    {
+        $query->when($search ?? false, function($query, $search){
+            return $query->where('title', 'like', "%$search%");
+        });
+    }
+
+    public function scopeCategory($query, $category)
+    {
+        $query->when($category ?? false, function($query, $category){
+            $query->where('category_id', $category);
+        });
+    }
 }

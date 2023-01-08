@@ -50,6 +50,11 @@
                                 leave blank if you don't want the image to be replaced
                             </small>
                         </div>
+                        <div class="form-group mb-3">
+                            <label>Contact Person</label>
+                            <input type="text" name="cp" class="form-control" placeholder="Contact Person"
+                                value="{{ $webinar->cp }}" required>
+                        </div>
                         <button type="submit" class="btn btn-warning">Edit</button>
                     </form>
                 </div>

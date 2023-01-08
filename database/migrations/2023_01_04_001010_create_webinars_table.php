@@ -23,6 +23,7 @@ class CreateWebinarsTable extends Migration
             $table->text('image');
             $table->datetime('date');
             $table->boolean('status');
+            $table->string('cp');
             $table->timestamps();
         });
     }

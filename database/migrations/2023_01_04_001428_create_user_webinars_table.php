@@ -13,16 +13,16 @@ class CreateUserWebinarsTable extends Migration
      */
     public function up()
     {
-        Schema::create('user_webinars', function (Blueprint $table) {
-            $table->id();
-            $table->foreignId('user_id')->constrained()
-            ->onUpdate('cascade')
-            ->onDelete('cascade');
-            $table->foreignId('webinar_id')->constrained()
-            ->onUpdate('cascade')
-            ->onDelete('cascade');
-            $table->timestamps();
-        });
+        // Schema::create('user_webinars', function (Blueprint $table) {
+        //     $table->id();
+        //     $table->foreignId('user_id')->constrained()
+        //     ->onUpdate('cascade')
+        //     ->onDelete('cascade');
+        //     $table->foreignId('webinar_id')->constrained()
+        //     ->onUpdate('cascade')
+        //     ->onDelete('cascade');
+        //     $table->timestamps();
+        // });
     }
 
     /**

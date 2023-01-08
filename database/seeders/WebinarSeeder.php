@@ -21,7 +21,8 @@ class WebinarSeeder extends Seeder
                 'description' => "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique nisi voluptatibus totam atque iste dolor quasi, suscipit eligendi quas velit facilis aliquid nemo laborum assumenda culpa dolores blanditiis modi minus!",
                 "image" => 'https://picsum.photos/200',
                 "date" => date("Y-m-d"),
-                "status" => rand(0,1)
+                "status" => rand(0,1),
+                "cp" => "WA: 081253534398",
             ]);
         }
     }

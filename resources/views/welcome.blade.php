@@ -25,7 +25,8 @@
                 aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page"
+                            href="{{ route("landing") }}">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                     <li class="nav-item"><a class="nav-link" href="#features">features</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">Login</a></li>
@@ -65,8 +66,8 @@
                     <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i
                             class="bi bi-person-workspace"></i>
                     </div>
-                    <h2 class="h4 fw-bolder">Join Webinars</h2>
-                    <p>Users can join directly to registered webinars by clicking the button available on the website.
+                    <h2 class="h4 fw-bolder">Webinars Info</h2>
+                    <p>Users can view information about the webinar on the website.
                     </p>
                 </div>
                 <div class="col-lg-4">
@@ -89,16 +90,24 @@
                 <h2 class="fw-bolder mb-3">Learn what you want</h2>
                 <div class="row">
                     <div class="col-md-4">
-                        <select name="" class="form-control">
-                            <option value="">Search by Category</option>
-                        </select>
+                        <form action="" method="get">
+                            <select name="category" class="form-control" onchange="this.form.submit()">
+                                <option value="">Search by Category</option>
+                                @foreach ($category as $item)
+                                <option value="{{ $item->id }}"
+                                    {{ $item->id == request()->get('category') ? 'selected' : '' }}>{{ $item->name }}
+                                </option>
+                                @endforeach
+                            </select>
+                        </form>
                     </div>
                     <div class="col">
                         <form action="" method="get">
                             <div class="input-group mb-3">
-                                <input type="text" class="form-control" placeholder="Webinar Title">
+                                <input type="text" class="form-control" placeholder="Search by Title" name="search"
+                                    value="{{ request()->get('search') ? request()->get('search') : "" }}">
                                 <div class="input-group-append">
-                                    <button class="btn btn-info" type="button">Search</button>
+                                    <button class="btn btn-info" type="submit">Search</button>
                                 </div>
                             </div>
                         </form>
