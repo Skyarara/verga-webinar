@@ -21,6 +21,7 @@ class CreateWebinarsTable extends Migration
             $table->string('title');
             $table->text('description');
             $table->text('image');
+            $table->text('link');
             $table->datetime('date');
             $table->boolean('status');
             $table->string('cp');

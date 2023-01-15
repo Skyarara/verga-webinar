@@ -16,11 +16,11 @@
 
     <style>
         img {
-            min-width: 300px;
-            min-height: 400px;
+            min-width: 200px;
+            min-height: 300px;
 
-            max-width: 300px;
-            max-height: 400px;
+            max-width: 200px;
+            max-height: 300px;
         }
 
     </style>
@@ -63,10 +63,10 @@
         </div>
     </header>
     <!-- Webinars section-->
-    <section class="py-5 border-bottom" id="webinars">
+    <section class="mb-2 mt-5 border-bottom" id="webinars">
         <div class="container px-5 my-5">
             <div class="row gx-5 justify-content-center text-center">
-                <div class="col-lg-4 mb-5 mb-lg-0">
+                <div class="col-lg-4 mb-lg-0">
                     <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i
                             class="bi bi-calendar2-fill"></i>
                     </div>
@@ -75,14 +75,24 @@
                         {{ $data->date }}
                     </p>
                 </div>
-                <div class="col-lg-4 mb-5 mb-lg-0">
+                <div class="col-lg-4 mb-lg-0">
                     <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-robot"></i>
                     </div>
                     <h2 class="h4 fw-bolder">Category</h2>
                     <p>{{ $data->category->name }}
                     </p>
+                    @can('user')
+                    <form action="{{ route("user_webinar_store") }}" method="post">
+                        @csrf
+                        <input type="hidden" name="webinar_id" value="{{ $data->id }}">
+                        <input type="hidden" name="user_id" value="{{ auth()->user()->id }}">
+                        <button class="btn btn-success mt-5" type="submit">
+                            register Now
+                        </button>
+                    </form>
+                    @endcan
                 </div>
-                <div class="col-lg-4 mb-5 mb-lg-0">
+                <div class="col-lg-4 mb-lg-0">
                     <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3">
                         <i class="bi bi-telephone-fill"></i>
                     </div>

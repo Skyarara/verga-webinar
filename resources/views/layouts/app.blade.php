@@ -49,6 +49,7 @@
                             <a class="nav-link" href="{{ route('landing') }}">{{ __('Home') }}</a>
                         </li>
                         @Auth
+                        @can('admin')
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('category_index') }}">{{ __('Category') }}</a>
                         </li>
@@ -58,6 +59,13 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('contact_index') }}">{{ __('Contact') }}</a>
                         </li>
+                        @endcan
+                        @can('user')
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('user_webinar') }}">{{ __('Webinar') }}</a>
+                        </li>
+                        @endcan
+
                         @endauth
                         @guest
                         @if (Route::has('login'))
@@ -66,11 +74,11 @@
                         </li>
                         @endif
 
-                        {{-- @if (Route::has('register'))
+                        @if (Route::has('register'))
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                         </li>
-                        @endif --}}
+                        @endif
                         @else
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
@@ -99,6 +107,7 @@
             @yield('content')
         </main>
     </div>
+    @yield('js')
 </body>
 
 </html>

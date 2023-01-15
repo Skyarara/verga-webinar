@@ -13,6 +13,16 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="{{ url('css/styles.css') }}" rel="stylesheet" />
+
+    <style>
+        img {
+            min-width: 200px;
+            max-width: 200px;
+            min-height: 300px;
+            max-height: 300px;
+        }
+
+    </style>
 </head>
 
 <body>
@@ -139,8 +149,27 @@
                                     {{ $dt->date }}
                                 </li>
                             </ul>
-                            <div class="d-grid"><a class="btn btn-outline-primary"
-                                    href="{{ route("webinar_show", ['id' => $dt->id]) }}">Detail</a>
+                            <div class="d-grid">
+                                <div class="row">
+                                    <div class="col">
+                                        <a class="btn btn-outline-primary"
+                                            href="{{ route("webinar_show", ['id' => $dt->id]) }}">Detail
+                                        </a>
+                                    </div>
+                                    @can('user')
+                                    <div class="col">
+                                        <form action="{{ route("user_webinar_store") }}" method="post">
+                                            @csrf
+                                            <input type="hidden" name="webinar_id" value="{{ $dt->id }}">
+                                            <input type="hidden" name="user_id" value="{{ auth()->user()->id }}">
+                                            <button class="btn btn-outline-success" type="submit">
+                                                register
+                                            </button>
+                                        </form>
+                                    </div>
+                                    @endcan
+                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -157,7 +186,7 @@
     <section id="about">
         <div class="bg-white py-5">
             <div class="container py-5">
-            <h2 class="display-4 font-weight-light">About Us</h2>
+                <h2 class="display-4 font-weight-light">About Us</h2>
                 <div class="row align-items-center mb-5">
                     <div class="col-lg-6 order-2 order-lg-1">
                         <i class="fa fa-bar-chart fa-2x mb-3 text-primary"></i>
@@ -314,18 +343,21 @@
     <!-- Core theme JS-->
     <script src="{{ url('js/scripts.js') }}"></script>
     <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-  
+
     <!--Start of Tawk.to Script-->
     <script type="text/javascript">
-    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-    (function(){
-    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-    s1.async=true;
-    s1.src='https://embed.tawk.to/63bae3f5c2f1ac1e202c579b/1gm90kukc';
-    s1.charset='UTF-8';
-    s1.setAttribute('crossorigin','*');
-    s0.parentNode.insertBefore(s1,s0);
-    })();
+        var Tawk_API = Tawk_API || {},
+            Tawk_LoadStart = new Date();
+        (function () {
+            var s1 = document.createElement("script"),
+                s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/63bae3f5c2f1ac1e202c579b/1gm90kukc';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+
     </script>
     <!--End of Tawk.to Script-->
 </body>

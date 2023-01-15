@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\User_webinar;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\StoreUser_webinarRequest;
 use App\Http\Requests\UpdateUser_webinarRequest;
 
@@ -15,28 +17,25 @@ class UserWebinarController extends Controller
      */
     public function index()
     {
-        //
+        $id = Auth::user()->id;
+        $data = [
+            "webinar" => User_webinar::with("webinar.category")->where("user_id", $id)->get(),
+        ];
+
+        return view("user_webinar.index", $data);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \App\Http\Requests\StoreUser_webinarRequest  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(StoreUser_webinarRequest $request)
+    public function store(Request $request)
     {
-        //
+        $data = [
+            "webinar_id" => $request->webinar_id,
+            "user_id" => $request->user_id,
+        ];
+
+        User_webinar::create($data);
+
+        return redirect()->route("user_webinar");
     }
 
     /**

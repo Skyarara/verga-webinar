@@ -6,7 +6,7 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    New Webinar
+                    Edit Webinar
                 </div>
                 <div class="card-body">
                     <form method="POST" action="{{ route('webinar_update') }}" enctype="multipart/form-data">
@@ -26,6 +26,11 @@
                             <label>Date</label>
                             <input type="datetime-local" name="date" class="form-control" placeholder="Date"
                                 value="{{ $webinar->date }}" required>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label>Meeting Link</label>
+                            <input type="text" name="link" class="form-control" placeholder="Meeting Link"
+                                value="{{ $webinar->link }}" required>
                         </div>
                         <div class="form-group mb-3">
                             <label>Category</label>

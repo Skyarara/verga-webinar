@@ -6,7 +6,7 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    New Category
+                    Edit Category
                 </div>
                 <div class="card-body">
                     <form method="POST" action="{{ route('category_update') }}">

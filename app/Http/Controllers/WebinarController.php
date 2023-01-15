@@ -51,6 +51,7 @@ class WebinarController extends Controller
             'description' => $request->description,
             'image' => $request->file('image')->store('webinar-image'),
             'date' => $request->date,
+            'link' => $request->link,
             'status' => $status,
             'cp' => $request->cp,
         ];
@@ -93,6 +94,7 @@ class WebinarController extends Controller
             'title' => $request->title,
             'description' => $request->description,
             'date' => $request->date,
+            'link' => $request->link,
             'status' => $status,
             'cp' => $request->cp
         ];

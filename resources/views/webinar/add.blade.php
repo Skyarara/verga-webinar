@@ -25,6 +25,10 @@
                             <input type="datetime-local" name="date" class="form-control" placeholder="Date" required>
                         </div>
                         <div class="form-group mb-3">
+                            <label>Meeting Link</label>
+                            <input type="text" name="link" class="form-control" placeholder="Meeting Link" required>
+                        </div>
+                        <div class="form-group mb-3">
                             <label>Category</label>
                             <select name="category" class="form-control" required>
                                 <option value="">Choose Category</option>

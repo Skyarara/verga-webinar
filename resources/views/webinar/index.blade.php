@@ -19,7 +19,7 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    {{ __('Category') }}
+                    {{ __('Webinar') }}
                     <a class="btn btn-primary float-end" href="{{ route('webinar_create') }}">Add</a>
                 </div>
                 <div class="card-body">

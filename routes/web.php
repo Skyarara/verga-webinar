@@ -7,6 +7,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\LandingController;
 use App\Http\Controllers\WebinarController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\UserWebinarController;
 
 
 /*
@@ -51,3 +52,7 @@ Route::get('/webinar/edit/{id}', [WebinarController::class, 'edit'])->name('webi
 Route::post('/webinar/update', [WebinarController::class, 'update'])->name('webinar_update');
 Route::get('/webinar/status/{id}', [WebinarController::class, 'status'])->name('webinar_status');
 Route::get('/webinar/destroy/{id}', [WebinarController::class, 'destroy'])->name('webinar_destroy');
+
+//user webinar
+Route::get('/user_webinar', [UserWebinarController::class, 'index'])->name('user_webinar');
+Route::post('/user_webinar/store', [UserWebinarController::class, 'store'])->name('user_webinar_store');

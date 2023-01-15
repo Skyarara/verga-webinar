@@ -27,13 +27,13 @@ class UserSeeder extends Seeder
             'password' => Hash::make("admin2"),
             'is_admin' => true,
         ]);
-        // for($i=1;$i<=6;$i++){
-        //     DB::table('users')->insert([
-        //         'name' => "user$i",
-        //         'email' => "user$i@gmail.com",
-        //         'password' => Hash::make("user$i"),
-        //         'is_admin' => false,
-        //     ]);
-        // }
+        for($i=1;$i<=6;$i++){
+            DB::table('users')->insert([
+                'name' => "user$i",
+                'email' => "user$i@gmail.com",
+                'password' => Hash::make("user$i"),
+                'is_admin' => false,
+            ]);
+        }
     }
 }
