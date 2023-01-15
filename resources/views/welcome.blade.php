@@ -22,6 +22,10 @@
             max-height: 300px;
         }
 
+        .header {
+            background-image: url('images/vergacover2.jpeg');
+        }
+
     </style>
 </head>
 
@@ -46,13 +50,31 @@
         </div>
     </nav>
     <!-- Header-->
-    <header class="bg-dark py-5">
+    <header class="py-5 header">
         <div class="container px-5">
             <div class="row gx-5 justify-content-center">
                 <div class="col-lg-6">
                     <div class="text-center my-5">
-                        <h1 class="display-5 fw-bolder text-white mb-2">Unlock yourself with Verga</h1>
-                        <p class="lead text-white-50 mb-4">
+                        <!-- <h1 class="display-5 fw-bolder text-white mb-2">Unlock yourself with Verga</h1>
+                        <p class="lead fw-bolder text-white">
+                            Verga is a website that provides information regarding webinars to help you improve their
+                            skills and abilities.
+                        </p> -->
+                        <br>
+                        <br>
+                        <br><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="py-5">
+        <div class="container px-5">
+            <div class="row gx-5 justify-content-center">
+                <div class="col-lg-6">
+                    <div class=" text-center my-5">
+                        <h1 class="display-5 fw-bolder text-secondary mb-2">Unlock yourself with Verga</h1>
+                        <p class="lead fw-bolder text-secondary">
                             Verga is a website that provides information regarding webinars to help you improve their
                             skills and abilities.
                         </p>
@@ -60,7 +82,7 @@
                 </div>
             </div>
         </div>
-    </header>
+    </section>
     <!-- Features section-->
     <section class="py-5 border-bottom" id="features">
         <div class="container px-5 my-5">
@@ -190,12 +212,13 @@
                 <div class="row align-items-center mb-5">
                     <div class="col-lg-6 order-2 order-lg-1">
                         <i class="fa fa-bar-chart fa-2x mb-3 text-primary"></i>
-                        <h2 class="font-weight-light">Lorem ipsum dolor sit amet</h2>
+                        <h2 class="font-weight-light">Verga</h2>
                         <p class="font-italic text-muted mb-4">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Verga adalah website yang menyediakan informasi mengenai webinar untuk membantu pengguna
+                            dalam meningkatkan skill dan keterampilan. Website Verga sendiri merupakan ide yang muncul
+                            dikarenakan faktor kurangnya wadah untuk menampung webinar webinar yang ada. Sehingga
+                            membuat orang yang ingin mengakses webinar mengalami kesusahan.
                         </p>
-                        <a href="#" class="btn btn-light px-5 rounded-pill shadow-sm">Learn More</a>
                     </div>
                     <div class="col-lg-5 px-5 mx-auto order-1 order-lg-2">
                         <img src="https://bootstrapious.com/i/snippets/sn-about/img-1.jpg" alt=""
@@ -209,12 +232,16 @@
                     </div>
                     <div class="col-lg-6">
                         <i class="fa fa-leaf fa-2x mb-3 text-primary"></i>
-                        <h2 class="font-weight-light">Lorem ipsum dolor sit amet</h2>
+                        <h2 class="font-weight-light">Benefit</h2>
                         <p class="font-italic text-muted mb-4">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Mengikuti acara webinar menjadi alternatif kegiatan belajar yang fleksibel. Tanpa harus
+                            keluar rumah dan mengeluarkan banyak waktu dan biaya, kamu sudah bisa mendapat materi lewat
+                            siaran online. Pastinya bikin kamu punya banyak waktu lebih untuk mengerjakan aktivitas
+                            produktif lain. Beberapa webinar juga menyediakan e-sertifikat untuk para peserta.
+                            Sertifikat pelatihan dan seminar dibutuhkan untuk masuk ke dunia kerja. E-sertifikat akan
+                            menjadi bukti, juga nilai tambah saat melamar kerja, kamu akan dinilai memiliki pengalaman
+                            dan pengetahuan tentang bidang tersebut.
                         </p>
-                        <a href="#" class="btn btn-light px-5 rounded-pill shadow-sm">Learn More</a>
                     </div>
                 </div>
             </div>
@@ -275,7 +302,7 @@
                     <!-- Team item-->
                     <div class="col-xl-3 col-sm-6">
                         <div class="bg-white rounded shadow-sm py-5 px-4">
-                            <img src="{{ asset('images/amel.jpeg') }}" alt="" width="100"
+                            <img src="{{ asset('images/david.jpeg') }}" alt="" width="100"
                                 class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm" />
                             <h5 class="mb-0">David Sie Wettleson</h5>
                             <span class="small text-uppercase text-muted">CEO - Founder</span>
