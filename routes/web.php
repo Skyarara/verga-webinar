@@ -56,3 +56,4 @@ Route::get('/webinar/destroy/{id}', [WebinarController::class, 'destroy'])->name
 //user webinar
 Route::get('/user_webinar', [UserWebinarController::class, 'index'])->name('user_webinar');
 Route::post('/user_webinar/store', [UserWebinarController::class, 'store'])->name('user_webinar_store');
+Route::get('/user_webinar/destroy/{id}', [UserWebinarController::class, 'destroy'])->name('user_webinar_destroy');

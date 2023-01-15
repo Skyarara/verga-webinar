@@ -53,7 +53,7 @@
                                 <td><a href="{{ $dt->webinar->link }}" target="_blank" class="btn btn-info">Link</a>
                                 </td>
                                 <td>
-                                    <a href="{{ route('webinar_destroy', ["id" => $dt->webinar->id]) }}"
+                                    <a href="{{ route('user_webinar_destroy', ["id" => $dt->id]) }}"
                                         class="btn btn-danger">Delete</a>
                                 </td>
                             </tr>

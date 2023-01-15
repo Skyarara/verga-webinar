@@ -38,48 +38,10 @@ class UserWebinarController extends Controller
         return redirect()->route("user_webinar");
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\User_webinar  $user_webinar
-     * @return \Illuminate\Http\Response
-     */
-    public function show(User_webinar $user_webinar)
+    public function destroy($id)
     {
-        //
-    }
+        User_webinar::destroy($id);
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\User_webinar  $user_webinar
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(User_webinar $user_webinar)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \App\Http\Requests\UpdateUser_webinarRequest  $request
-     * @param  \App\Models\User_webinar  $user_webinar
-     * @return \Illuminate\Http\Response
-     */
-    public function update(UpdateUser_webinarRequest $request, User_webinar $user_webinar)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\User_webinar  $user_webinar
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(User_webinar $user_webinar)
-    {
-        //
+        return redirect()->route("user_webinar");
     }
 }
