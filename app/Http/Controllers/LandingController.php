@@ -12,11 +12,9 @@ class LandingController extends Controller
 {
     public function index(Request $request)
     {
-
-
         $category = Category::all();
 
-        if (!Auth::user()->is_admin) {
+        if (Auth::check() && !Auth::user()->is_admin) {
             $user_webinar = User_webinar::where("user_id", Auth::user()->id)->pluck('webinar_id');
             $webinar = Webinar::with("category")
             ->whereNotIn('id',$user_webinar)
