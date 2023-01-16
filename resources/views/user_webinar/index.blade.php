@@ -50,7 +50,7 @@
                                 <td>{{ $dt->webinar->title }}</td>
                                 <td>{{ $dt->webinar->category->name }}</td>
                                 <td>{{ $dt->webinar->date }}</td>
-                                <td><a href="{{ $dt->webinar->link }}" target="_blank" class="btn btn-info">Link</a>
+                                <td><a href="{{ $dt->webinar->link }}" target="_blank" class="btn btn-info">Join Zoom</a>
                                 </td>
                                 <td>
                                     <a href="{{ route('user_webinar_destroy', ["id" => $dt->id]) }}"

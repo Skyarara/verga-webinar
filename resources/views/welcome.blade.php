@@ -163,7 +163,6 @@
                             </div>
                             <ul class="list-unstyled mb-4">
                                 <li class="mb-2">
-                                    <i class="bi bi-dot"></i>
                                     <strong>{{ $dt->title }}</strong>
                                 </li>
                                 <li class="text-muted">
