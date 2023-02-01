@@ -90,9 +90,9 @@
                 <div class="col-lg-4 mb-5 mb-lg-0">
                     <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-envelope"></i>
                     </div>
-                    <h2 class="h4 fw-bolder">Email</h2>
-                    <p>In this feature, users will get an event entry ticket via email from the webinar
-                        organizer
+                    <h2 class="h4 fw-bolder">Join Webinar</h2>
+                    <p>In this feature, users will get to directly join the webinar that they have registered through
+                        the website.
                     </p>
                 </div>
                 <div class="col-lg-4 mb-5 mb-lg-0">
